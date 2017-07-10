@@ -1,0 +1,6 @@
+rootProject.name = 'ienum'
+include 'api'
+include 'json-jackson'
+include 'json-fastjson'
+include 'db-mybatis'
+
