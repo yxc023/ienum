@@ -1,11 +1,10 @@
 package com.yangxiaochen.ienum.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.yangxiaochen.ienum.api.IEnum;
-import com.yangxiaochen.inum.json.jackson.IEnumD;
 import com.yangxiaochen.inum.json.jackson.IEnumSerializer;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -17,7 +16,6 @@ import java.io.IOException;
 public class IEnumJacksonTest {
 
     @JsonSerialize(using = IEnumSerializer.class)
-    @JsonDeserialize(using = IEnumD.class)
     enum UserStatus implements IEnum<Integer, String>
 
     {
@@ -61,9 +59,6 @@ public class IEnumJacksonTest {
     @Test
     public void test() throws IOException {
         ObjectMapper om = new ObjectMapper();
-        om.registerModule()
-        System.out.println(om.writeValueAsString(UserStatus.NORMAL));
-        om.readValue("{\"userStatus\":{\"value\":\"1\",\"desc\":\"正常\"}}", User.class);
-
+        Assert.assertEquals("{\"value\":\"1\",\"desc\":\"正常\"}", om.writeValueAsString(UserStatus.NORMAL));
     }
 }
