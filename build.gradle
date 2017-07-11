@@ -1,11 +1,12 @@
 group 'com.yangxiaochen.ienum'
 version '1.0.0-SNAPSHOT'
 
-allprojects {
+apply plugin: 'idea'
+
+subprojects {
     repositories {
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
         }
     }
 }
-

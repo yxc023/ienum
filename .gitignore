@@ -4,3 +4,7 @@ build
 target
 */target
 .gradle
+*.iml
+*.ipr
+*.iws
+out

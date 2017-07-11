@@ -2,6 +2,8 @@ group 'com.yangxiaochen.ienum'
 version '1.0.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
+
 
 sourceCompatibility = 1.8
 
