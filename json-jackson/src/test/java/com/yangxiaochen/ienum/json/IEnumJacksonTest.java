@@ -16,7 +16,7 @@ import java.io.IOException;
 public class IEnumJacksonTest {
 
     @JsonSerialize(using = IEnumSerializer.class)
-    enum UserStatus implements IEnum<Integer, String>
+    enum UserStatus implements IEnum<Integer>
 
     {
         NORMAL(1, "正常");

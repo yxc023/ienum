@@ -13,6 +13,6 @@ import java.lang.reflect.Type;
 public class IEnumSerializer implements ObjectSerializer {
     @Override
     public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType, int features) throws IOException {
-        
+
     }
 }
